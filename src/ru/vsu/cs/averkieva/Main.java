@@ -8,11 +8,17 @@ public class Main {
         map.put("1345", "dog");
         map.put("1234", "flower");
 
-
         map.printMap();
+        System.out.println("size: " + map.size());
         System.out.println();
 
         System.out.println(map.get("1234"));
+        System.out.println();
+
+        map.remove("1234");
+        map.printMap();
+        System.out.println("size: " + map.size());
+
 
     }
 }
