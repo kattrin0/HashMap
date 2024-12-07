@@ -1,5 +1,4 @@
 package ru.vsu.cs.averkieva;
-
 import java.util.LinkedList;
 import java.util.List;
 
@@ -44,6 +43,13 @@ class HashMap<K, V> {
         return null;
     }
 
+    public void remove(K key) {
+        int hashCode = hash(key);
+        array[hashCode] = new LinkedList<>();
+        size--;
+
+    }
+
     public int hash(K key) {
         if (key == null) {
             return 0;
@@ -72,7 +78,7 @@ class HashMap<K, V> {
         return size > (loadFactor * array.length);
     }
 
-    private int size() {
+    public int size() {
         return size;
     }
 
