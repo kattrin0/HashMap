@@ -1,6 +1,12 @@
 package ru.vsu.cs.averkieva;
+
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+
+//Добавены методы: clear, ContainsKey
+//Исправлен метод removeKey(теперь коллизии не удаляются все)
+
 
 class HashMap<K, V> {
     private final int defaultSize = 16;
@@ -33,6 +39,7 @@ class HashMap<K, V> {
         size += 1;
     }
 
+
     public V get(K key) {
         int hashCode = hash(key);
         for (Entry<K, V> entry : array[hashCode]) {
@@ -43,12 +50,38 @@ class HashMap<K, V> {
         return null;
     }
 
-    public void remove(K key) {
+    /*public void remove(K key) {
         int hashCode = hash(key);
         array[hashCode] = new LinkedList<>();
         size--;
 
+    }*/
+
+    public void removeKey(K key) {
+        int hashCode = hash(key);
+        List<Entry<K, V>> bucket = array[hashCode];
+        Iterator<Entry<K, V>> iterator = bucket.iterator();
+        while (iterator.hasNext()) {
+            Entry<K, V> entry = iterator.next();
+            if (entry.key.equals(key)) {
+                iterator.remove();
+                size--;
+
+            }
+        }
     }
+
+    public boolean containsKey(K key) {
+        int hashCode = hash(key);
+        List<Entry<K, V>> bucket = array[hashCode];
+        for (Entry<K, V> entry : bucket) {
+            if (entry.key.equals(key)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     public int hash(K key) {
         if (key == null) {
@@ -86,12 +119,20 @@ class HashMap<K, V> {
         return size == 0;
     }
 
+    public void clear() {
+        for (int i = 0; i < array.length; i += 1) {
+            array[i].clear();
+        }
+        size = 0;
+    }
+
     public void printMap() {
         System.out.println("HashMap:");
         for (List<Entry<K, V>> k : array) {
             for (Entry<K, V> entry : k) {
                 System.out.println("Key: " + entry.key + ", Value: " + entry.value);
             }
+
         }
     }
 
