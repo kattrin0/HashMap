@@ -1,0 +1,66 @@
+digraph HashMap {
+  node [shape=record, fontname="Arial", fontsize=10];
+  rankdir=LR;
+  nodesep=0.4;
+  ranksep=0.5;
+  edge [color=blue, arrowhead=vee];
+
+  bucket0 [label="Bucket 0", shape=box, style=filled, fillcolor=lightgray];
+  bucket1 [label="Bucket 1", shape=box, style=filled, fillcolor=lightgray];
+  bucket2 [label="Bucket 2", shape=box, style=filled, fillcolor=lightgray];
+  bucket3 [label="Bucket 3", shape=box, style=filled, fillcolor=lightgray];
+  bucket4 [label="Bucket 4", shape=box, style=filled, fillcolor=lightgray];
+  bucket5 [label="Bucket 5", shape=box, style=filled, fillcolor=lightgray];
+  bucket6 [label="Bucket 6", shape=box, style=filled, fillcolor=lightgray];
+  bucket7 [label="Bucket 7", shape=box, style=filled, fillcolor=lightgray];
+  bucket8 [label="Bucket 8", shape=box, style=filled, fillcolor=lightgray];
+  bucket9 [label="Bucket 9", shape=box, style=filled, fillcolor=lightgray];
+  bucket10 [label="Bucket 10", shape=box, style=filled, fillcolor=lightgray];
+  bucket11 [label="Bucket 11", shape=box, style=filled, fillcolor=lightgray];
+  bucket12 [label="Bucket 12", shape=box, style=filled, fillcolor=lightgray];
+  bucket13 [label="Bucket 13", shape=box, style=filled, fillcolor=lightgray];
+  bucket14 [label="Bucket 14", shape=box, style=filled, fillcolor=lightgray];
+  bucket15 [label="Bucket 15", shape=box, style=filled, fillcolor=lightgray];
+  null0 [label="null", shape=plaintext];
+  bucket0 -> null0 [style=dashed];
+  node_1_0 [label="<f0> Entry |{hash: 1512417 | key: 1563 | value: for test | <f1> next}"];
+  bucket1 -> node_1_0:f0;
+  node_1_0:f1 -> node_1_1:f0;
+  node_1_1 [label="<f0> Entry |{hash: 97 | key: a | value: for test1 | <f1> next}"];
+  null1 [label="null", shape=plaintext];
+  node_1_1:f1 -> null1;
+  node_2_0 [label="<f0> Entry |{hash: 1509442 | key: 1234 | value: flower | <f1> next}"];
+  bucket2 -> node_2_0:f0;
+  null2 [label="null", shape=plaintext];
+  node_2_0:f1 -> null2;
+  node_3_0 [label="<f0> Entry |{hash: 1510435 | key: 1345 | value: dog | <f1> next}"];
+  bucket3 -> node_3_0:f0;
+  null3 [label="null", shape=plaintext];
+  node_3_0:f1 -> null3;
+  null4 [label="null", shape=plaintext];
+  bucket4 -> null4 [style=dashed];
+  null5 [label="null", shape=plaintext];
+  bucket5 -> null5 [style=dashed];
+  null6 [label="null", shape=plaintext];
+  bucket6 -> null6 [style=dashed];
+  null7 [label="null", shape=plaintext];
+  bucket7 -> null7 [style=dashed];
+  null8 [label="null", shape=plaintext];
+  bucket8 -> null8 [style=dashed];
+  null9 [label="null", shape=plaintext];
+  bucket9 -> null9 [style=dashed];
+  null10 [label="null", shape=plaintext];
+  bucket10 -> null10 [style=dashed];
+  null11 [label="null", shape=plaintext];
+  bucket11 -> null11 [style=dashed];
+  null12 [label="null", shape=plaintext];
+  bucket12 -> null12 [style=dashed];
+  null13 [label="null", shape=plaintext];
+  bucket13 -> null13 [style=dashed];
+  null14 [label="null", shape=plaintext];
+  bucket14 -> null14 [style=dashed];
+  null15 [label="null", shape=plaintext];
+  bucket15 -> null15 [style=dashed];
+
+  { rank=same; bucket0; bucket1; bucket2; bucket3; bucket4; bucket5; bucket6; bucket7; bucket8; bucket9; bucket10; bucket11; bucket12; bucket13; bucket14; bucket15; }
+}
