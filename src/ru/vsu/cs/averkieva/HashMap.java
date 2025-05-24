@@ -145,4 +145,8 @@ class HashMap<K, V> {
             this.value = value;
         }
     }
+
+    protected List<Entry<K, V>>[] getArray() {
+        return array;
+    }
 }
