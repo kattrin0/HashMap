@@ -25,7 +25,7 @@ public class HashMapGraph {
             if (array[i].isEmpty()) {
                 // Для пустых бакетов
                 sb.append(String.format("  null%d [label=\"null\", shape=plaintext];\n", i));
-                sb.append(String.format("  bucket%d -> null%d [style=dashed];\n", i, i));
+                sb.append(String.format("  bucket%d -> null%d ;\n", i, i));
             } else {
                 // Для непустых бакетов: создаем цепочку элементов
                 for (int j = 0; j < array[i].size(); j++) {

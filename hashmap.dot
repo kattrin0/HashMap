@@ -22,7 +22,7 @@ digraph HashMap {
   bucket14 [label="Bucket 14", shape=box, style=filled, fillcolor=lightgray];
   bucket15 [label="Bucket 15", shape=box, style=filled, fillcolor=lightgray];
   null0 [label="null", shape=plaintext];
-  bucket0 -> null0 [style=dashed];
+  bucket0 -> null0 ;
   node_1_0 [label="<f0> Entry |{hash: 1512417 | key: 1563 | value: for test | <f1> next}"];
   bucket1 -> node_1_0:f0;
   node_1_0:f1 -> node_1_1:f0;
@@ -38,29 +38,29 @@ digraph HashMap {
   null3 [label="null", shape=plaintext];
   node_3_0:f1 -> null3;
   null4 [label="null", shape=plaintext];
-  bucket4 -> null4 [style=dashed];
+  bucket4 -> null4 ;
   null5 [label="null", shape=plaintext];
-  bucket5 -> null5 [style=dashed];
+  bucket5 -> null5 ;
   null6 [label="null", shape=plaintext];
-  bucket6 -> null6 [style=dashed];
+  bucket6 -> null6 ;
   null7 [label="null", shape=plaintext];
-  bucket7 -> null7 [style=dashed];
+  bucket7 -> null7 ;
   null8 [label="null", shape=plaintext];
-  bucket8 -> null8 [style=dashed];
+  bucket8 -> null8 ;
   null9 [label="null", shape=plaintext];
-  bucket9 -> null9 [style=dashed];
+  bucket9 -> null9 ;
   null10 [label="null", shape=plaintext];
-  bucket10 -> null10 [style=dashed];
+  bucket10 -> null10 ;
   null11 [label="null", shape=plaintext];
-  bucket11 -> null11 [style=dashed];
+  bucket11 -> null11 ;
   null12 [label="null", shape=plaintext];
-  bucket12 -> null12 [style=dashed];
+  bucket12 -> null12 ;
   null13 [label="null", shape=plaintext];
-  bucket13 -> null13 [style=dashed];
+  bucket13 -> null13 ;
   null14 [label="null", shape=plaintext];
-  bucket14 -> null14 [style=dashed];
+  bucket14 -> null14 ;
   null15 [label="null", shape=plaintext];
-  bucket15 -> null15 [style=dashed];
+  bucket15 -> null15 ;
 
   { rank=same; bucket0; bucket1; bucket2; bucket3; bucket4; bucket5; bucket6; bucket7; bucket8; bucket9; bucket10; bucket11; bucket12; bucket13; bucket14; bucket15; }
 }
