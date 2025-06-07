@@ -92,15 +92,14 @@ class HashMap<K, V> {
         return Math.abs(hash) % array.length;
     }
 
-    private void resize() {
+    protected void resize() {
         List<Entry<K, V>>[] newArray = new List[array.length * 2];
         for (int i = 0; i < newArray.length; i++) {
             newArray[i] = new LinkedList<>();
         }
         for (List<Entry<K, V>> bucket : array) {
             for (Entry<K, V> entry : bucket) {
-                int hashCode = hash(Key);
-                hashCode = Math.abs(hashCode) % newArray.length;
+                int hashCode = Math.abs(entry.key.hashCode()) % newArray.length;
                 newArray[hashCode].add(entry);
             }
         }
@@ -111,7 +110,7 @@ class HashMap<K, V> {
         return size > (loadFactor * array.length);
     }
 
-    public int size() {
+    protected int size() {
         return size;
     }
 

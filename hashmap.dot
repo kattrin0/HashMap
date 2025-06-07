@@ -23,10 +23,10 @@ digraph HashMap {
   bucket15 [label="Bucket 15", shape=box, style=filled, fillcolor=lightgray];
   null0 [label="null", shape=plaintext];
   bucket0 -> null0 ;
-  node_1_0 [label="<f0> Entry |{hash: 1512417 | key: 1563 | value: for test | <f1> next}"];
+  node_1_0 [label="<f0> Entry |{hash: 1512417 | key: 1563 | value: apple | <f1> next}"];
   bucket1 -> node_1_0:f0;
   node_1_0:f1 -> node_1_1:f0;
-  node_1_1 [label="<f0> Entry |{hash: 97 | key: a | value: for test1 | <f1> next}"];
+  node_1_1 [label="<f0> Entry |{hash: 97 | key: a | value: apple1 | <f1> next}"];
   null1 [label="null", shape=plaintext];
   node_1_1:f1 -> null1;
   node_2_0 [label="<f0> Entry |{hash: 1509442 | key: 1234 | value: flower | <f1> next}"];
